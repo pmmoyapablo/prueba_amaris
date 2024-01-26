@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+
+  backend.amarisrest:
+    container_name: backend_amarisrest
+    image: amaris-backend
+    build:
+      context: .
+      dockerfile: backend-amaris-spring-boot/Dockerfile
+
+  frontend.amarisspa:
+    container_name: frontend_frontend.amarisspa
+    image: amaris-frontend
+    build:
+      context: .
+      dockerfile: frontend-amaris-angular/Dockerfile

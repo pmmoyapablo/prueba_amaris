@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+
+  backend.amarisrest:
+    ports:
+      - 8081:8081
+    networks:
+      - my-network
+  
+  frontend.amarisspa:
+    restart: always
+    ports:
+      - 4200:81
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
